@@ -140,4 +140,4 @@ dmypy.json
 # PyCharm
 .idea/
 
-/products/migrations
+/core_categories/migrations
