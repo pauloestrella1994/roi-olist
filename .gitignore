@@ -139,5 +139,3 @@ dmypy.json
 
 # PyCharm
 .idea/
-
-/core_categories/migrations
