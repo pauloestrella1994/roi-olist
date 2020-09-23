@@ -41,6 +41,41 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 
+## Deploy to Heroku
+
+To deploy in Heroku you must create your own account [here](https://www.heroku.com/)
+
+After that, to push this application, you need to install the plugin, to enable you to send informations from .env:
+
+```bash
+$ heroku plugins:install heroku-config
+```
+and than, push it:
+
+```bash
+$ heroku config:push -a
+```
+to check the configs, use this:
+
+```bash
+$ heroku config
+```
+
+To push your entire application, use the command to set your last code version to heroku:
+
+```bash
+$ git push heroku master --force (--force is optional)
+```
+
+Optional, you can enable static files, that the DRF provides, into your remote application.
+To do that, you need to enable collectstatic:
+
+```bash
+$ heroku config:set DEBUG_COLLECTSTATIC=1
+```
+
+You can find more informations to enable static files in Heroku, [here](https://devcenter.heroku.com/articles/django-assets)
+
 ps: This API is readonly in the endpoints, create, update and delete are only available with Token authorization. 
 
 # Documentation 
